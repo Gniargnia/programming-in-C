@@ -1,7 +1,8 @@
 {
     "name": "C/Clang Environment",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "postCreateCommand": "sudo apt update && sudo apt install -y clang",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
     "customizations": {
         "vscode": {
             "extensions": [

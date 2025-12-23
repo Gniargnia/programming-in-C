@@ -1,7 +1,7 @@
 CC = clang
-CFLAGS = -Wall -Wextra -std=c11
+CFLAGS = -Wall -Wextra -std=c11 -Iinclude
 
-SRC = src/main.c
+SRC = src/main.c src/utils.c
 OBJ = $(SRC:.c=.o)
 
 all: programme
