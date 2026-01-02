@@ -1,14 +1,17 @@
 {
-    "name": "C/Clang Environment",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "ms-vscode.cpptools",
-                "ms-vscode.cpptools-extension-pack"
-            ]
-        }
+  "name": "C/Clang Environment",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "vadimcn.vscode-lldb"
+      ]
     }
+  },
+  "postCreateCommand": "echo 'CS50 tools installed via pip --user'",
+  "postStartCommand": "true"
 }
