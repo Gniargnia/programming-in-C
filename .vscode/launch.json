@@ -8,9 +8,6 @@
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "cwd": "${fileDirname}",
-            "env": {},
-            "stdio":null,
-            "terminal": "integrated",
             "preLaunchTask": "clang build active file"
         }
     ]

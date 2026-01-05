@@ -11,6 +11,7 @@
         "-Wall",
         "-Wextra",
         "-std=c11",
+        "-fno-omit-frame-pointer",
         "${file}",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}",

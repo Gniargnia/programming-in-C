@@ -7,9 +7,14 @@
     "vscode": {
       "extensions": [
         "ms-vscode.cpptools",
-        "ms-vscode.cpptools-extension-pack",
-        "vadimcn.vscode-lldb"
-      ]
+        "vadimcn.vscode-lldb",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "C_Cpp.default.compilerPath": "/usr/bin/clang",
+        "C_Cpp.default.intelliSenseMode": "linux-clang-x64",
+        "C_Cpp.default.cStandard": "c11"
+      }
     }
   },
   "postCreateCommand": "echo 'CS50 tools installed via pip --user'",

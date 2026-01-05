@@ -4,10 +4,11 @@ FROM mcr.microsoft.com/devcontainers/base:ubuntu
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     clang \
+    clang-tools \
+    lldb \
     curl \
     git-lfs \
     sudo \
-    gdb \
     valgrind \
     make \
     jq \
