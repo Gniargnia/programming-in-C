@@ -1,0 +1,9 @@
+# /etc/systemd/system/ark-backup-fast.service
+[Unit]
+Description=ARK Fast Backup (every 30 minutes)
+Wants=ark-backup-fast.timer
+
+[Service]
+Type=oneshot
+User=arkserver
+ExecStart=/home/arkserver/arkserver/core/ark-backup.sh fast

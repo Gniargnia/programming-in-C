@@ -207,3 +207,14 @@ Deux pièges fréquents :
 - Types primitifs : `int`, `bool`, `char`, `float`, ...
 - Types composés / dérivés : construits à partir d’autres types (tableaux, `struct`, chaînes `char *`)
 - Types abstraits : souvent modélisés via `struct` (et en C++ on parlerait aussi de `class`)
+
+## Opérateurs 
+
+- Adresse de l'opérateur : `&`
+- Opérateur de déréférencement : `*`
+
+- Permet d'utiliser les pointeurs: `%p`
+
+Un pointeur c'est simplement une variable qui contient l'adresse de quelque chose : `int *p = &n` --> se traduit par la variable p sera un pointeur qui contiendra l'adresse d'un integer. À droite se traduit par prend l'adresse de n. Au final, c'est l'adresse de n qui sera assignée dans la variable p. Cette adresse est hexadécimal de forme 0x.
+
+

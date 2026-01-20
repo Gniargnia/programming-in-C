@@ -1,0 +1,9 @@
+# /etc/systemd/system/ark-backup-daily.service
+[Unit]
+Description=ARK Daily Backup (23:59)
+Wants=ark-backup-daily.timer
+
+[Service]
+Type=oneshot
+User=arkserver
+ExecStart=/home/arkserver/arkserver/core/ark-backup.sh daily

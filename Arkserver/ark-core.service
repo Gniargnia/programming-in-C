@@ -1,0 +1,29 @@
+# /etc/systemd/system/ark-core.service
+[Unit]
+Description=ARK Survival Evolved - Core Supervisor (Pro)
+After=network.target
+StartLimitIntervalSec=600
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=arkserver
+User=arkserver
+WorkingDirectory=/home/arkserver/arkserver/core
+
+# Démarrage via ton Core minimal
+ExecStartPre=/home/arkserver/arkserver/core/ark-backup.sh boot
+ExecStart=/home/arkserver/arkserver/core/ark-core.sh
+
+# Arrêt propre via ton Stop minimal
+ExecStop=/home/arkserver/arkserver/core/ark-stop.sh
+ExecStopPost=/home/arkserver/arkserver/core/ark-backup.sh prestop
+
+# Watchdog systemd : relance uniquement si ARK crash
+Restart=on-failure
+RestartSec=60
+
+# Environnement propre pour ARK
+Environment=LD_LIBRARY_PATH=/home/arkserver/arkserver/ShooterGame/Binaries/Linux
+
+# Identifiant syslog propre

@@ -13,7 +13,7 @@ int main(void)
     srandom(time(NULL));
 
     int N = get_int("Taille de la suite: ");
-    int I = get_int("Invervalle de la suite: ");
+    int I = get_int("Valeur maximale de la suite: ");
 
     int arr[N];
 
